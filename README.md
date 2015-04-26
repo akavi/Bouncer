@@ -17,6 +17,12 @@ class MyModel < ActiveRecord::Base
   callable_by ActionController::Base, def some_controller_only_method
     puts "I can't be called by a model!"
   end
+
+  # OR:
+  def another_controller_only_method
+    puts "I can't be called by a model!"
+  end
+  callable_by :another_controller_only_method, ActionController::Base 
 end
   
 ```
