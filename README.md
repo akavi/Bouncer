@@ -23,6 +23,17 @@ class MyModel < ActiveRecord::Base
     puts "I can't be called by a model!"
   end
   callable_by :another_controller_only_method, ActionController::Base 
+
+  # OR 2: Electric Boogaloo
+  # All methods defined after this can only be called by Controllers
+  callable_by ActionController::Base
+
+  def one_more_controller_only_method
+    puts "I can't be called by a model!"
+  end
+
+  # reset things like this:
+  callable_by_any
 end
   
 ```
