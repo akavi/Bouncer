@@ -1,3 +1,4 @@
+require "bouncer/version"
 require 'binding_of_caller'
 
 module Bouncer

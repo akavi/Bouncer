@@ -1,3 +1,4 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem 'binding_of_caller'
+# Specify your gem's dependencies in bouncer.gemspec
+gemspec
